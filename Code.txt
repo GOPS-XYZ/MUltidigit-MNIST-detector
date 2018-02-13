@@ -1,0 +1,35 @@
+> Variable Font Size
+> Anywhere in the image
+
+*Extraction Process******************
+> Convert image to GrayScale
+> Image may contain black digit with white background
+> Or White digit with black background
+==> Any Image is converted to white digit with black background
+
+> Using Contours find the digit location
+> Extract the digit and Resize such that it fits in 28x28 box and centered in it
+*************************************
+
+*Detection***************************
+(Train the MNIST single digit model
+ Save the Weights and Baises of Trained Model)==> To be done only once
+> Construct the model
+> Restore the saved Weights and Basies from the Trained Model
+> Now for each extracted Digit from the image, detect the Digit.
+*************************************
+
+
+*Model*******************************
+
+# # # # # # # # # # # # # # #	-Input Image	(28 X 28 X 1)
+ ..........................	-Convolution Layer [6X6X1 => 6]
+ ##########################	-Result		(28 X 28 X 6)
+  .......................	-Convolution Layer [5X5X6 => 12]
+  #######################	-Result		(14 X 14 X 12)
+   .....................	-Convolution Layer [4X4X12 => 24]
+   #####################	-Result		(7 X 7 X 24)
+
+
+*************************************
+
